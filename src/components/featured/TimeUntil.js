@@ -25,7 +25,6 @@ class TimeUntil extends Component {
         minutes,
         seconds
       });
-      console.log(seconds);
     }
   }
 
