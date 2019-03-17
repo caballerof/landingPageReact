@@ -22,6 +22,10 @@ class Header extends Component {
     window.addEventListener('scroll', this.handleScroll);
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
   handleScroll = () => {
     if (window.scrollY > 10) {
       this.setState({
@@ -42,7 +46,7 @@ class Header extends Component {
           backgroundColor: this.state.headerTransparent
             ? 'transparent'
             : '#2f2f2f',
-          padding: '10px 0px'
+          boxShadow: 'none'
         }}
       >
         <Toolbar>
